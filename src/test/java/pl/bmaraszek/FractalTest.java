@@ -6,7 +6,7 @@ public class FractalTest {
 	
 	@Test(expected = IllegalArgumentException.class)
 	public void test63() {
-		Fractal.getBoard(7);
+		FractalBoard.getBoard(7);
 	}
 
 	@Test
@@ -17,7 +17,7 @@ public class FractalTest {
 		String[][] arr = new String[SIZE][SIZE];
 		for (int x = 1; x <= SIZE; ++x) {
 			for (int y = 1; y <= SIZE; ++y) {
-				arr[y-1][x-1] = Fractal.getId(x, y, SIZE);
+				arr[y-1][x-1] = FractalBoard.getId(x, y, SIZE);
 			}
 		}
 

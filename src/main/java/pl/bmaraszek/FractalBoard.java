@@ -1,6 +1,6 @@
 package pl.bmaraszek;
 
-public class Fractal {
+public class FractalBoard {
 	
 	private static boolean isPowerOf2(int x){
 		return (x > 0) && ((x & (x - 1)) == 0);

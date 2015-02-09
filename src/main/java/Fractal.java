@@ -1,4 +1,4 @@
-package pl.bmaraszek;
+
 
 import java.awt.Canvas;
 import java.awt.Color;
@@ -7,11 +7,13 @@ import java.util.Scanner;
 
 import javax.swing.JFrame;
 
-public class PixelCanvas extends Canvas {
+import pl.bmaraszek.FractalBoard;
+
+public class Fractal extends Canvas {
 
 	private static final long serialVersionUID = 1L;
 	private static final int SIZE = 512;
-	private static final String[][] BOARD = Fractal.getBoard(SIZE);
+	private static final String[][] BOARD = FractalBoard.getBoard(SIZE);
 	private static String REGEX;
 
 	@Override
@@ -38,7 +40,7 @@ public class PixelCanvas extends Canvas {
 		JFrame frame = new JFrame();
 
 		frame.setSize(SIZE, SIZE + 25);
-		frame.add(new PixelCanvas());
+		frame.add(new Fractal());
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);
 	}
